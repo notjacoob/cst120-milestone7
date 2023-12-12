@@ -1,0 +1,37 @@
+/*
+Jacob Blair
+CST120
+Milestone 7
+12/10/23
+This is my own work.
+*/
+.theater-mode { /* ensure that theater mode div is the size of the entire page, accounting for default browser margins, and that it also supports transitions and is able to be clicked through */
+    z-index: 1; /* ensure that div is above all elements */
+    background-color: black;
+    pointer-events: none; /* allow clicking and hovering through the div */
+    width: 100%;
+    position: fixed;
+    padding: 0;
+    height:100%;
+    filter: opacity(0%);
+    transition: filter 100ms ease-in;
+}
+.theater-active { /* enable theater mode by changing opacity (needs to be a filter because the opacity element doesn't effect the background color) */
+    filter: opacity(70%);
+}
+.photo h3, .photo p { /* formatting caption */
+    color: var(--highlight-color);
+    text-shadow: 1px 1px 2px black;
+}
+.photo img { /* making the image style more consistent with the overall page style */
+    box-shadow: 5px 5px black;
+    border-radius: 10px;
+    max-width: 100%;
+    max-height: 100%;
+}
+#videos video { /* aligning video size with resolution and styling it with overall website*/
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 5px 5px black;
+}

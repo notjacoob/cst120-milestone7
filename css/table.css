@@ -1,0 +1,43 @@
+/*
+    Jacob Blair
+    CST120
+    Milestone 7
+    12/10/23
+    This is my own work.
+*/
+.styled-table{ /*table style for the whole table*/
+    /*border: 2px solid;*/
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 300px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+    border-collapse: collapse;
+    padding: 15px;
+    font-family: sans-serif;
+}
+.styled-table thead tr { /*table style for the tr element nested inside a thead element*/
+    background-color: #04364A;
+    color: #ffffff;
+    text-align: left;
+}
+.styled-table th, .styled-table td { /*table style for the th and td elements*/
+    padding: 12px 15px;
+}
+.styled-table tbody tr { /*table style for the tr elements nested inside a tbody element*/
+    border-bottom: 1px solid #04364A;
+}
+.styled-table tbody tr:nth-of-type(even) { /*table style for every even tr nested inside a tbody*/
+    background-color: #64CCC5;
+}
+.styled-table tr:hover, .styled-table tr:hover:nth-of-type(even) {  /*table style for td elements that are being hovered*/
+    background-color: var(--highlight-color);
+    color: white;
+    text-decoration: bold;
+    cursor: help;
+}
+.styled-table td a { /*table style for a elements nested inside td elements*/
+    text-decoration: none;
+}
+.styled-table th { /*prompt click on table header*/
+    cursor: pointer;
+}

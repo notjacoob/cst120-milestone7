@@ -1,0 +1,53 @@
+/*
+Jacob Blair
+CST120
+Milestone 7
+12/10/23
+This is my own work.
+*/
+.formbuttons { /*align buttons in form*/
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 6%;
+}
+.formbutton {/* style buttons in form*/
+    width: 47%!important;
+    border-radius: 8px!important;
+    border-width: 1px!important;
+    border-color: rgba(0, 0, 0, 0.3)!important;
+    box-shadow: 0px 0px black!important;
+    transition: box-shadow 150ms!important;
+    font-weight: 500!important;
+    line-height: 20px!important;
+    padding: 10px 12px!important;
+    transition: all 200ms!important;
+    background-color: var(--button-color)!important;
+    color: var(--text-color)!important;
+} /* similar to the buttons used in index but not taken from a template & with different transitions */
+.formbutton:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9)!important;
+    transition: box-shadow 150ms!important;
+    background-color: var(--highlight-color)!important;
+} /* changed properties of button when it is hovered over */
+.formbutton:active {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4)!important;
+    transition: box-shadow background-color 150ms!important;
+    background-color: #dafffb!important;
+} /* changed properties of button when it is clicked */
+.form-control {
+    box-sizing: border-box!important;
+    border: 2px solid #ccc!important;
+    background-color: var(--site-bg)!important;
+    color: var(--button-color)!important; 
+}
+textarea { /* use important tags to override bootstrap */ 
+    box-sizing: border-box!important;
+    border: 2px solid #ccc!important;
+    border-radius: 4px!important;
+    color: var(--button-color)!important;
+    background-color: var(--site-bg)!important;
+    resize: none!important;
+    white-space: pre-wrap!important;
+}

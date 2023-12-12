@@ -1,0 +1,4 @@
+animation: https://www.youtube.com/watch?v=BDBgMqFjjnY
+color scheme: https://colorhunt.co/palette/04364a176b8764ccc5dafffb
+index button: https://getcssscan.com/css-buttons-examples
+table style base: https://dev.to/dcodeyt/creating-beautiful-html-tables-with-css-428l 

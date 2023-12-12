@@ -1,0 +1,143 @@
+<!--
+    Jacob Blair
+    12/10/23
+    CST-120
+    Milestone 7
+    This is my own work.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Projects</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/sitewide.css"> <!-- global css for the whole site -->
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/table.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito&family=Outfit:wght@300&display=swap" rel="stylesheet">
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" type="text/javascript"></script>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- js -->
+    <script src="js/transition.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/table.js"></script>
+</head>
+
+<body onload="javascript:fadeIn()" class="pb-4">
+    <!-- because of our inter-page transition, the page will start out completely transparent, and we should change that once it finishes loading -->
+    <div class="pos-f-t d-flex justify-content-center">
+        <h1 class="hovertext waveanimate header h1" id="header">
+            <span aria-hidden="true" style="--i:1">M</span>
+            <span aria-hidden="true" style="--i:2">y</span>
+            <span aria-hidden="true" style="opacity:0">.</span>
+            <span aria-hidden="true" style="--i:3">P</span>
+            <span aria-hidden="true" style="--i:4">r</span>
+            <span aria-hidden="true" style="--i:5">o</span>
+            <span aria-hidden="true" style="--i:6">j</span>
+            <span aria-hidden="true" style="--i:7">e</span>
+            <span aria-hidden="true" style="--i:8">c</span>
+            <span aria-hidden="true" style="--i:8">t</span>
+            <span aria-hidden="true" style="--i:8">s</span>
+
+            <!-- since inline CSS has the highest priority, for each span selected through the animation -->
+        </h1>
+    </div>
+    <nav class="navbar navbar-expand navbar-light justify-content-center align-items-center" id="index-navbar"
+        onclick="toggleCollapse()">
+        <div class="collapse" id="index-navbar-col">
+            <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-2">
+                <!-- home page navbar dropdown -->
+                <button onclick="javascript:fadeOut('index.html')" class="navbutton">Home</button>
+                <button onclick="javascript:fadeOut('about.html')" class="navbutton">About Me</button>
+                <!-- buttons that when clicked fade out the current page and then send you to the desired page -->
+                <button onclick="javascript:fadeOut('projects.html')" class="navbutton">My Projects</button>
+                <button onclick="javascript:fadeOut('work.html')" class="navbutton">My Work</button>
+                <button onclick="javascript:fadeOut('contact.html')" class="navbutton">Contact Me</button>
+                <button onclick="javascript:fadeOut('media.html')" class="navbutton">Media</button>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section>
+            <div class="w-100 d-flex justify-content-center" id="projectstablediv">
+                <!-- columnbutton used to center an item that's not a button -->
+                <table alt="table of projects, their languages, and their frameworks" class="styled-table"
+                    alt="table of my projects and how they were made">
+                    <!-- Table to display my projects, which has a visible border and extra padding between items using HTML attributes -->
+                    <thead id="projects" onclick="javascript:toggleShowHide('projects')"> <!-- container tag to tell the browser that this is the head of the table -->
+                        <tr>
+                            <th>Name</th>
+                            <th>Language</th>
+                            <th>Framework</th>
+                        </tr>
+                    </thead>
+                    <tbody id="projects-rows"> <!-- container tag to tell the browser that this is the body of the table -->
+                        <tr>
+                            <td><a class="link" href="index.html">My Website</a></td>
+                            <!-- links nested inside the table for extra navigation -->
+                            <td>HTML, CSS, JS</td>
+                            <td>JQuery, Bootstrap</td>
+                        </tr>
+                        <tr>
+                            <td><a class="link" href="">Inventory App</a></td>
+                            <!-- no current link to a demonstration of this project  -->
+                            <td>C#</td>
+                            <td>Windows Forms</td>
+                        </tr>
+                        <tr>
+                            <td><a class="link" href="https://github.com/notjacoob/The-Void">The Void</a></td>
+                            <!-- link underline removed because it looks nicer -->
+                            <td>Ruby, HTML, CSS</td>
+                            <td>Ruby on Rails, SCSS</td>
+                        </tr>
+                        <tr>
+                            <td><a class="link" href="https://github.com/notjacoob/SocketChat">SocketChat</a></td>
+                            <td>Java</td>
+                            <td>JavaFX, Sockets</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <br>
+        <section>
+            <h2 class="header hovertext columnbutton">Project Demos</h2>
+            <hr />
+            <div class="d-flex flex-column align-items-center w-100 media-body">
+                <h4 class="blackstroke"><a class="link" href="https://github.com/notjacoob/The-Void">The Void</a>
+                    (Rails, HTML, CSS, JS, Ruby)</h4> <!-- blackstroke simply adds a very small black stroke to text -->
+                <video alt="video demonstration of my void rails project" class="col-12 col-md-6" controls>
+                    <!-- video of a project I made a while ago as an example. resized to 480p to fit the layout of the page even though the original video is 4k. could be solved potentially with in iframe? -->
+                    <source src="./media/ProjectDemo.mp4" type="video/mp4">
+                    <p>A video of my app The Void, which was made using Ruby on Rails and serves as a completely
+                        randomized social media-esque site where once you post there is no longer a way to access that
+                        post in a non-random way.</p> <!-- serves as alt text for the video -->
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <hr />
+            <div class="d-flex flex-column align-items-center w-100 media-body">
+                <!-- project media to center as well as control text wrapping -->
+                <h4 class="blackstroke"><a class="link" href="https://github.com/notjacoob/SocketChat">SocketChat</a>
+                    (Java, JavaFX)</h4>
+                <img alt="image of my SocketChat project" src="./media/ProjectDemoScreenshot.png"
+                    class="col-12 col-md-6" alt="Screenshot of my Socket Chat program">
+            </div>
+            <!-- all items that contain visual content on this page are using alt text (or something similar in the case of the video) to achieve ADA compliance -->
+        </section>
+        </div>
+    </main>
+</body>
+
+</html>

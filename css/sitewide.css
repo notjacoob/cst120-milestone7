@@ -1,0 +1,124 @@
+/*
+Jacob Blair
+CST120
+Milestone 7
+12/10/23
+This is my own work.
+*/
+:root { /*root applies to the entire html file no matter where it is (including head, elements that may be outside of the head or body)*/
+    --site-bg: #DAFFFB; /*definition of the color scheme, obtained from colorhunt in the citations*/
+    --button-color: #04364A;
+    --text-color: #64CCC5;
+    --highlight-color: #176b87;
+    --card-color: #bbfaf2;
+}
+.h1 { /*change size of jquery h1 class*/
+    font-size: 2.5rem!important;
+}
+button {
+    transition: background-color 150ms;
+    background-color: var(--button-color); /*uses root colors, and transitions when clicked*/
+    color: var(--text-color)
+}
+button:hover {
+    transition: background-color 150ms;
+    background-color: var(--highlight-color); /*changes colors when hovered*/
+}
+.navbutton { /* amazon style buttons changed to look like the rest of the size. taken from a template in citations.txt */
+    border: 1px solid #d5d9d9;
+    border-radius: 8px;
+    box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    line-height: 45px;
+    text-align: center;
+    user-select: none;
+    width: 150px;
+}
+
+.navbutton:active { /*change text color when clicked*/
+    transition: background-color 150ms;
+    background-color: #DAFFFB;
+}
+body {
+    font-family: 'Gabarito', sans-serif !important;
+    font-size: larger !important;
+    background-color: var(--site-bg) !important; /*global background color*/
+    opacity: 0 !important;
+    transition: opacity 350ms !important;
+}
+
+h1, h2, h3, h4, h5, h6, p, span {
+    color: var(--text-color)!important; /*all common text types use these colors and also have a text-shadow transition since it's commonly used in the site*/
+    transition: text-shadow 150ms;
+}
+.hovertext:hover {
+    text-shadow: 3px 3px black; /*only text with this class will use the afformentioned transition*/
+    transition: text-shadow 150ms;
+}
+.header {
+    text-shadow: 2px 2px black;
+}
+.blackstroke { 
+    text-shadow: 1px 1px black;
+}
+.waveanimate { /*because the space in between spans is so big*/
+    word-spacing: -8px;
+}
+hr { /*z-index so the hr is placed behind any shadow*/
+    border: none;
+    height: 2px;
+    background: black;
+}
+.waveanimate span { /*ease-in-out is a sine wave*/
+    position: relative;
+    display: inline-block;
+    animation: wave 1.5s ease-in-out infinite;
+    animation-delay: calc(0.1s*var(--i)) /*use of the inline css to delay each animation by an incremeneting amount of time*/
+}
+@keyframes wave { /*at 20% of the way through the animation, translate -5px, and at 40% go back*/
+    0% {
+        transform: translateY(0);
+    } 20% {
+        transform: translateY(-5px);
+    }40%,100% {
+        transform: translateY(0);
+    }
+}
+.link {
+    color: deepskyblue;
+    text-shadow: 1px 1px 1px black;
+    text-decoration: none;
+} /* more visually appealing links on the custom background color */
+
+.link:hover {
+    color: blue;
+} /* reactive links when hovered */
+.panel { /* starting position for dropdown content */
+    overflow: hidden;
+    max-width: 100%;
+    transition: max-height 0.2s ease-out;
+}
+#index-navbar { /*custom color and cursor for the navbar*/
+    background-color: var(--highlight-color) !important;
+    cursor:ns-resize; /*it may not be directly implied to click on the small bar to open the navbar, so we encourage it with a custom cursor*/
+}
+#btns-container {
+    gap: 5px!important;
+}
+#cards { /*vertically display cards*/
+    margin-top: 25px;
+    gap: 25px;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px black;
+    transition: box-shadow 150ms;
+    background-color: var(--card-color)!important;
+    border: 1px solid black!important;
+}
+.card:hover {
+    box-shadow: 10px 10px 2px black;
+}

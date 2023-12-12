@@ -1,0 +1,21 @@
+/*
+Jacob Blair
+CST120
+Milestone 7
+12/10/23
+This is my own work.
+*/
+.projectmedia { /* center and text-wrap  */
+    margin-bottom: 25px;
+}
+#projectstablediv { /*space from page header*/
+    margin-top: 30px;
+}
+.columnbutton { /*can be used on elements that arent buttons, a table in this case*/
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+table {
+    width: 75%;
+}
